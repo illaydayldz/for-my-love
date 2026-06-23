@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd1da" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="For My Love" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>For My Love</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/pixel-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="introScreen" class="intro-screen">
+    <div class="intro-card">
+      <div class="intro-pixels">♡  ♡  ♡</div>
+      <h1>Gizli bir sayfa bulundu...</h1>
+      <p>Bu sayfa sadece stres yükselince açılacak küçük bir güvenli alan.</p>
+      <button id="openSiteBtn">Paketi aç</button>
+      <small>for my love</small>
+    </div>
+  </div>
+
+  <main class="window app-shell">
+    <header class="topbar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <p>♡ for my love ♡</p>
+      <div class="mini">×</div>
+    </header>
+
+    <nav class="tabs" aria-label="Site bölümleri">
+      <button class="tab-btn active" data-tab="home">♡ Ana</button>
+      <button class="tab-btn" data-tab="library">📚 Kütüphane</button>
+    </nav>
+
+    <section id="home" class="tab-page active">
+      <section class="hero">
+        <div class="intro card">
+          <h1>Merhaba aşkım ♡</h1>
+          <p>Eğer buradaysan, muhtemelen biraz stresli hissediyorsun.</p>
+          <p class="pink">Unutma, ben hep yanındayım.</p>
+        </div>
+        <div class="couple-wrap">
+          <img src="assets/pixel-preview.png" alt="Pixel art çift görseli" />
+        </div>
+      </section>
+
+      <section class="emergency card">
+        <h2>♡ Acil Durum Butonu ♡</h2>
+        <p>Kendini kötü hissettiğinde buraya basabilirsin.</p>
+        <button id="emergencyBtn" class="heart-btn">BURAYA<br>BAS</button>
+        <div id="noteBox" class="note-box">Her basışta sana özel bir not gelecek.</div>
+      </section>
+
+      <section class="features">
+        <article class="feature purple">
+          <h3>🎧 Rahatlatıcı Şeyler</h3>
+          <p>Kulaklığını tak, 3 dakika sadece sakinleş.</p>
+          <button data-note="playlist">Bir sakinlik notu al</button>
+        </article>
+        <article class="feature yellow">
+          <h3>🎮 Mini Mola</h3>
+          <p>Zihnini kısa süreliğine dağıtmak serbest.</p>
+          <button id="miniBreakBtn">Mini mola seç</button>
+        </article>
+        <article class="feature green">
+          <h3>☁️ Nefes Al</h3>
+          <p>4 saniye al, 4 saniye tut, 4 saniye ver.</p>
+          <button id="breathBtn">Başlat</button>
+        </article>
+        <article class="feature blue cat-card">
+          <h3>🐱 Kedi Besleme</h3>
+          <p>Minik kediyi besle, o da sana moral versin.</p>
+          <div class="cat" id="cat">=＾● ⋏ ●＾=</div>
+          <button id="feedCatBtn">Mama ver 🍪</button>
+        </article>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="breath-box card">
+          <h3 id="breathTitle">Nefes kutusu</h3>
+          <div class="breath-circle" id="breathCircle">♡</div>
+          <p id="breathText">Hazır olduğunda başlat.</p>
+        </div>
+        <div class="checklist card">
+          <h3>Küçük Hatırlatma</h3>
+          <label><input type="checkbox"> Bir bardak su içtim.</label>
+          <label><input type="checkbox"> 25 dakika çalıştım.</label>
+          <label><input type="checkbox"> 5 dakika mola verdim.</label>
+          <label><input type="checkbox"> Kendime yüklenmedim.</label>
+        </div>
+      </section>
+    </section>
+
+    <section id="library" class="tab-page">
+      <section class="library-hero card">
+        <h1>📚 Bizim küçük kütüphane</h1>
+        <p>Pomodoro açılınca pixel karakterlerimiz birlikte ders çalışacak.</p>
+        <p class="pink">Sen çalışırken ben de yanında bekliyorum gibi düşün. ♡</p>
+      </section>
+
+      <section class="library-room card">
+        <div class="shelf"><span>▣</span><span>▣</span><span>▣</span><span>▣</span></div>
+        <div class="clock-sign" id="modeLabel">Ders zamanı</div>
+
+        <div class="study-scene">
+          <div class="pixel-person boy studying" aria-label="Pixel erkek karakter"><div class="hair"></div><div class="head"><span></span></div><div class="body"></div></div>
+          <div class="desk"><div class="book open"></div><div class="mug">♡</div><div class="lamp"></div></div>
+          <div class="pixel-person girl studying" aria-label="Pixel kız karakter"><div class="hair"></div><div class="head"><span></span></div><div class="body"></div></div>
+        </div>
+
+        <div class="pomodoro-panel">
+          <h2>Pomodoro</h2>
+          <div class="timer" id="timer">25:00</div>
+          <div class="timer-buttons">
+            <button id="startPomodoro">Başlat</button>
+            <button id="pausePomodoro">Duraklat</button>
+            <button id="resetPomodoro">Sıfırla</button>
+          </div>
+          <p id="pomodoroText">25 dakika ders, sonra 5 dakika mola.</p>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <p>Ne olursa olsun, seninle gurur duyuyorum. Seni çok seviyorum. ♡</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
